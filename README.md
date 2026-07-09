@@ -109,3 +109,14 @@ For more examples with time and date in flows data, as well as
 integration with Shiny, see the Quick Start vignette and documentation
 for the package functions at
 <https://flowmapblue.github.io/flowmapblue.R/>.
+
+<div class="map-container">
+
+<iframe 
+    src="index.html" 
+    width="100%" 
+    height="600px" 
+    style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px;"
+    allowfullscreen> </iframe>
+
+</div>
