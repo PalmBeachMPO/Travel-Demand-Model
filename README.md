@@ -113,7 +113,7 @@ for the package functions at
 <div class="map-container">
 
 <iframe 
-    src="index.html" 
+    src="https://github.com/PalmBeachMPO/Travel-Demand-Model/index.html" 
     width="100%" 
     height="600px" 
     style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px;"
