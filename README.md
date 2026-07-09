@@ -25,7 +25,7 @@ target="_blank"><img
 src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"
 alt="Lifecycle: stable" /></a>
 
-[![DOI](https://zenodo.org/badge/DOI/10.32614/CRAN.package.flowmapblue.svg)](https://doi.org/10.32614/CRAN.package.flowmapblue)
+[![](https://zenodo.org/badge/DOI/10.32614/CRAN.package.flowmapblue.svg)](https://doi.org/10.32614/CRAN.package.flowmapblue)
 
 <!-- badges: end -->
 
