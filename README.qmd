@@ -1,6 +1,7 @@
 ---
 format: 
-  html: default
+  html: 
+    output-file: "index.html"
   gfm: default
 execute: 
   message: false
