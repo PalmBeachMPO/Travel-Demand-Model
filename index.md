@@ -59,6 +59,6 @@ Sys.setenv(MAPBOX_API_TOKEN = "YOUR_MAPBOX_ACCESS_TOKEN")
 
 Click the map below to view the interactive version:
 
-[![](reference/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
+[![](reference/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/README.html)
 
 ### Interactive Map View
