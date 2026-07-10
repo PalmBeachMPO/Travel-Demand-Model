@@ -68,13 +68,14 @@ Sys.setenv(MAPBOX_API_TOKEN = "YOUR_MAPBOX_ACCESS_TOKEN")
 
 Click the map below to view the interactive version:
 
-[![Interactive Flowmap Demo](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
+[![Interactive Flowmap Demo](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/README.html)
 
 ### Interactive Map View
 
 ```{r}
 #| echo: false
 #| eval: !expr knitr::is_html_output()
+#| include: !expr knitr::is_html_output()
 #| results: 'asis'
 library(flowmapblue)
 
@@ -90,7 +91,6 @@ flowmap <- flowmapblue(
  animation = FALSE
 )
 
-# This wrapper creates a hard structural boundary that JavaScript cannot break out of
 htmltools::tags$div(
   style = "position: relative; clear: both; width: 100%; min-height: 520px; margin-top: 30px; display: block;",
   htmltools::tags$div(
