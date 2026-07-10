@@ -81,42 +81,10 @@ up at [Mapbox](https://account.mapbox.com/).
 Sys.setenv(MAPBOX_API_TOKEN = "YOUR_MAPBOX_ACCESS_TOKEN")
 ```
 
-``` r
-library(flowmapblue)
+### Live Demo
 
-# load locations and flows for Switzerland
-data(ch_locations)
-data(ch_flows)
+Click the map below to view the interactive version:
 
-flowmap <- flowmapblue(
- ch_locations,
- ch_flows,
- mapboxAccessToken = Sys.getenv('MAPBOX_API_TOKEN'),
- clustering = TRUE,
- darkMode = TRUE,
- animation = FALSE
-)
+[![](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
 
-# view the map
-flowmap
-```
-
-Here is a [nice intro blog
-post](https://www.paulamoraga.com/blog/2020-07-11-mobility.html) by
-Paula Moraga.
-
-For more examples with time and date in flows data, as well as
-integration with Shiny, see the Quick Start vignette and documentation
-for the package functions at
-<https://flowmapblue.github.io/flowmapblue.R/>.
-
-<div class="map-container">
-
-<iframe 
-    src="https://github.com/PalmBeachMPO/Travel-Demand-Model/index.html" 
-    width="100%" 
-    height="600px" 
-    style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px;"
-    allowfullscreen> </iframe>
-
-</div>
+### Interactive Map View

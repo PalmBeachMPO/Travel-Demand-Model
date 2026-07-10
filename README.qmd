@@ -1,9 +1,11 @@
 ---
-format: html
+format: 
+  html: default
+  gfm: default
 execute: 
   message: false
   warning: false
-eval: false
+eval: true
 default-image-extension: ""
 ---
 
@@ -38,12 +40,14 @@ as described in this [excellent blog post](https://doodles.mountainmath.ca/blog/
 Install from CRAN:
 
 ```{r}
+#| eval: false
 install.packages("flowmapblue")
 ```
 
 To install the development version from GitHub you will need to install `remotes` if you don't have it yet:
 
 ```{r}
+#| eval: false
 if (!require("remotes")) install.packages("remotes")
 
 remotes::install_github("FlowmapBlue/flowmapblue.R",
@@ -60,12 +64,21 @@ Setup your Mapbox access token. You can obtain a free token by signing up at [Ma
 Sys.setenv(MAPBOX_API_TOKEN = "YOUR_MAPBOX_ACCESS_TOKEN")
 ```
 
+### Live Demo
+
+Click the map below to view the interactive version:
+
+[![Interactive Flowmap Demo](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
+
+### Interactive Map View
 ```{r}
+#| echo: false
+#| eval: !expr knitr::is_html_output()
+#| results: 'asis'
 library(flowmapblue)
 
-# load locations and flows for Switzerland
-data(ch_locations)
-data(ch_flows)
+ch_locations <- read.csv("C:/MPO/OneDrive - Palm Beach MPO/Documents/GitHub/Travel-Demand-Model/data-raw/locations.csv")
+ch_flows <- read.csv("C:/MPO/OneDrive - Palm Beach MPO/Documents/GitHub/Travel-Demand-Model/data-raw/flows.csv")
 
 flowmap <- flowmapblue(
  ch_locations,
@@ -76,17 +89,8 @@ flowmap <- flowmapblue(
  animation = FALSE
 )
 
-# view the map
-flowmap
+htmltools::div(
+ style = "width: 100%; height: 500px; margin-top: 20px; clear: both;", 
+ flowmap
+)
 ```
-
-
-Here is a [nice intro blog post](https://www.paulamoraga.com/blog/2020-07-11-mobility.html) by Paula Moraga.
-
-For more examples with time and date in flows data, as well as integration with Shiny, see the Quick Start vignette and documentation for the package functions at [https://flowmapblue.github.io/flowmapblue.R/](https://flowmapblue.github.io/flowmapblue.R/).
-
-### Live Demo
-
-Click the map below to view the interactive version:
-
-[![Interactive Flowmap Demo](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
