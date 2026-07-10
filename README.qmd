@@ -71,6 +71,7 @@ Click the map below to view the interactive version:
 [![Interactive Flowmap Demo](man/figures/demo.png)](https://palmbeachmpo.github.io/Travel-Demand-Model/)
 
 ### Interactive Map View
+
 ```{r}
 #| echo: false
 #| eval: !expr knitr::is_html_output()
@@ -89,8 +90,12 @@ flowmap <- flowmapblue(
  animation = FALSE
 )
 
-htmltools::div(
- style = "width: 100%; height: 500px; margin-top: 20px; clear: both;", 
- flowmap
+# This wrapper creates a hard structural boundary that JavaScript cannot break out of
+htmltools::tags$div(
+  style = "position: relative; clear: both; width: 100%; min-height: 520px; margin-top: 30px; display: block;",
+  htmltools::tags$div(
+    style = "position: absolute; top: 0; left: 0; width: 100%; height: 500px;",
+    flowmap
+  )
 )
 ```
